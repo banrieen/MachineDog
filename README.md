@@ -5,7 +5,7 @@
 -----------
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Documentation Status](https://readthedocs.org/projects/nni/badge/?version=latest)](https://achinewolf.readthedocs.io/zh_CN/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/machinewolf/badge/?version=latest)](https://machinewolf.readthedocs.io/en/latest/?badge=latest)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/apulis/MachineWolf)
 [![GitHub release (latest)](https://img.shields.io/github/v/release/apulis/MachineWolf)](https://github.com/apulis/MachineWolf/releases)
 ![Issues track](https://img.shields.io/github/issues/apulis/MachineWolf)
@@ -98,14 +98,12 @@
 
 ### 测试套件说明
 
-**整个测试套件分类**
-
 * aisetshub:    模型验证相关
 * datasetshub:  数据集验证相关
 * testhub:      平台、组件测试案例和脚本
 * issuesboard:  同步issues和report
 
-### 执行测试套件
+### 测试集结构
 
 测试套件本着兼容并蓄，容纳萃取的宗旨，独立灵活的组织测试套件。支持各种前沿的、优秀的工具和理念；目前将测试方案（testscheme）、数据(datas.yaml)、脚本(.py,.jmx)、执行计划（host.yml,taurus.yml）灵活的组织在一起。
 目前还是一些样例，还需要完善和补充。
