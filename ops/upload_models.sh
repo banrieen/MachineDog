@@ -14,11 +14,11 @@ sudo apt-get update && sudo apt-get install -y postgresql-client
 # Database Info
 dbName="postgres"
 netMaxSpeeds=500
-DB_ADDRESS="192.168.1.198" 
+DB_ADDRESS="xxx.xxx.xxx.xxx" 
 DB_PORT=5432
 DATABASE_NAME="ai_arts" 
 USER="postgres" 
-PGPASSWORD="ff20ncd9bc72k3cF" 
+PGPASSWORD="xxxxxxxxxxxxxx" 
 DATABASE_ENGINE=postgres
 
 models=("pytorch:1.5" "mxnet:2.0.0-gpu-py3" "tensorflow:2.3.0-gpu-py3" "tensorflow:1.15.2-gpu-py3" "tensorflow:1.14.0-gpu-py3")

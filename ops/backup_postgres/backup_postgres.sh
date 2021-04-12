@@ -11,10 +11,10 @@ set_env()
 {
 # 初始化设置环境
 echo "================== set-env done! "
-HOST=192.168.1.198
+HOST=xxx.xxx.xxx.xxx
 PORT=5432
 USERNAME=postgres
-PGPASSWORD="ff20ncd9bc72k3cF"
+PGPASSWORD="xxxxxxxxxxxxx"
 DATABASENAME=postgres
 BACKUPFILENAME=/mnt/hdd/pvc/aiplatform-model-data/
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
@@ -81,7 +81,8 @@ echo """
 """
 }
 
-# set_env  
+# Update and set tools
+set_env  
 while getopts "h:p:u:w:t:d:?" options; do
     case "${options}" in
         h) 
