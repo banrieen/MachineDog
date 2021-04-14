@@ -1,6 +1,8 @@
 
-平台性能测试
+平台性能调研
 =====================================================================================
+
+* https://web.dev/measure/
 
 * k8s-kpis-with-kuberhealthy:
 
@@ -20,10 +22,6 @@ https://github.com/argoproj/argo/
 https://argoproj.github.io/argo-cd/getting_started/#1-install-argo-cd
 
 https://blog.argoproj.io/about
-
-* jenkins-x
-https://www.inovex.de/blog/spinnaker-vs-argo-cd-vs-tekton-vs-jenkins-x/
-
 
 * kubernetes perf-tests:
 
@@ -55,34 +53,3 @@ https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md
 
 
-平台框架性能分析				
-				
-				
-				
-				
-				
-	用户接口			
-	组件	kubectl 	Grafana	
-				
-	数据层	Mysql	Redis	
-	虚拟环境	k8s		
-	Runtimie	GO	python	dotnet
-	系统	Ubuntu 18.04.1		
-	网络	LAN		
-	硬件	Arm	x86	
-
-docker build -f ./Dockerfile-ubuntu1804-basement . -t ubuntu:18.04-basement
-docker build -f ./Dockerfile-tfuser-arm64 . -t tf:1.15.0-basement-arm64
-docker build -f ./Dockerfile-msuser-arm64 . -t ms:1.0.1-basement-arm64
-
-docker tag ubuntu:18.04-basement harbor.sigsus.cn:8443/sz_gongdianju/apulistech/ubuntu:18.04-basement-arm64
-
-
-    image:
-      tensorflow:
-        - image: apulistech/tensorflow-npu:1.15-20.1.RC1-arm
-          desc: "tf-no-root"
-      mindspore:
-        - image: apulistech/mindspore-npu:1.0.1-20.1.RC1-arm
-          desc: "ms-no-root"
-           
