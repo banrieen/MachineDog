@@ -7,9 +7,11 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Documentation Status](https://readthedocs.org/projects/machinewolf/badge/?version=latest)](https://machinewolf.readthedocs.io/en/latest/?badge=latest)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/apulis/MachineWolf)
-[![GitHub release (latest)](https://img.shields.io/github/v/release/apulis/MachineWolf)](https://github.com/apulis/MachineWolf/releases)
 ![Issues track](https://img.shields.io/github/issues/apulis/MachineWolf)
 [![Gitter](https://badges.gitter.im/banrieen/MachineWolfHome.svg)](https://gitter.im/banrieen/MachineWolfHome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![codecov](https://codecov.io/gh/banrieen/MachineWolf/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineWolf)
+[![Build Status](https://travis-ci.org/banrieen/MachineWolf.svg?branch=master)](https://travis-ci.org/banrieen/MachineWolf)
+
 
 <!-- ![GitHub Latest download](https://img.shields.io/github/downloads/apulis/MachineWolf/latest/total?style=plastic) -->
 <!-- [![codeql-analysis Actions Status](https://github.com/apulis/MachineWolf/workflows/codeql-analysis/badge.svg)](https://github.com/apulis/MachineWolf/actions)
