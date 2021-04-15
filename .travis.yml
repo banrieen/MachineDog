@@ -14,3 +14,4 @@ script:
   - locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
 after_script:
   - codecov -t CODECOV_TOKEN
+  - bash <(curl -s https://codecov.io/bash)
