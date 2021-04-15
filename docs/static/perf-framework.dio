@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="lg40r6MZNJt1xcG8-npv" name="第 1 页">
-        <mxGraphModel dx="506" dy="195" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="461" dy="355" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -22,7 +22,7 @@
                 <mxCell id="37" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;rotation=0;" parent="1" vertex="1">
                     <mxGeometry x="293.6" y="82.53" width="33.6" height="157.47" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="Perf-Framework" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;strokeColor=none;fillColor=none;fontStyle=1" parent="1" vertex="1">
+                <mxCell id="44" value="Auto-Framework" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;strokeColor=none;fillColor=none;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="10" y="40" width="170" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="58" value="Fake User" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;strokeColor=none;fillColor=none;" parent="1" vertex="1">
@@ -48,9 +48,6 @@
                 </mxCell>
                 <mxCell id="75" value="Update Conf: host.conf" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="163.60000000000002" y="413.76" width="130" height="20" as="geometry"/>
-                </mxCell>
-                <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="1" source="61" target="61" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="79" value="Fake Images" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="329.6" y="220" width="120" height="20" as="geometry"/>
@@ -173,26 +170,26 @@
                         <mxPoint x="473.6" y="659.77" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="146" value="Performance Metrics" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+                <mxCell id="146" value="Performance Metrics" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="85.2" y="840" width="83.2" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="147" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;direction=south;rotation=-90;size=0.2430000000000007;" vertex="1" parent="1">
+                <mxCell id="147" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;direction=south;rotation=-90;size=0.2430000000000007;" parent="1" vertex="1">
                     <mxGeometry x="130" y="840" width="109.6" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="148" value="Kubernetes Metrics&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="148" value="Kubernetes Metrics&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="203.6" y="790" width="176.4" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="149" value="Remote Prometheus&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="149" value="Remote Prometheus&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="203.6" y="900" width="186" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="151" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;dashed=1;startArrow=none;startFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="126" target="146">
+                <mxCell id="151" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;dashed=1;startArrow=none;startFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="126" target="146" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="30" y="713.74" as="sourcePoint"/>
                         <mxPoint x="127" y="824" as="targetPoint"/>
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="152" value="Option" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="151">
+                <mxCell id="152" value="Option" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" parent="151" vertex="1" connectable="0">
                     <mxGeometry x="-0.1955" y="-1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
