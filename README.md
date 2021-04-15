@@ -1,5 +1,5 @@
 <p align="center">
-<img src="docs/img/ico.png" width="150"/>
+<img src="docs/static/ico.png" width="150"/>
 </p>
 
 -----------
@@ -62,11 +62,11 @@
 
 **测试报告示例**
 
-![locust-http-response](docs/img/locust_report.png)
+![locust-http-response](docs/static/locust_report.png)
 
 **CLI看板示例**
 
-![taurus-status](docs/img/taurus_report.png)
+![taurus-status](docs/static/taurus_report.png)
 
 **导出测试报告**
 
