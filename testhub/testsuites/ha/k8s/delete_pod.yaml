@@ -1,0 +1,20 @@
+scenarios:
+- name: Kill one pod in my namespace, make sure the service responds
+  steps:
+  # kill a pod from `myapp` namespace
+  - podAction:
+      matches:
+        - namespace: default
+      filters:
+        - randomSample:
+            size: 1
+      actions:
+        - kill:
+            probability: 0.75
+  # check my service continues working
+  - probeHTTP:
+      target:
+        service:
+          name: user-dashboard
+          namespace: default
+      endpoint: /user-dashboard
