@@ -3,16 +3,15 @@
 PLATFORM_VERSION: "v1.0.0"
 TEST_TAG: "rc0"
 ENV: 
-  INFO: "office_test_lab: 3010推理集群"
-  HOST: "http://182.138.104.162:16480"
-  Prometheus_Client: http://182.138.104.162:9091
+  INFO: "2.0 testenv"
+  HOST: "http://192.168.1.198"
+  Prometheus_Client: http://192.168.1.198:9091
   CONF_PATH: "/home/InstallationYTung"
   DATA_PATH: "datasetshub/"
 
 ACCOUNT:
-  web_admin: {"userName":"admin","password":"fpS6bZ"}
-  testuser: {"userName":"thomas","password":"apulis@2025"}
-  ssh_root: {"userName":"root","password":"Aiperf@2025"}
+  web_admin: {"userName":"admin","password":""}
+  ssh_root: {"userName":"root","password":""}
   token: ""
   user_id: 1
   currentRole_id: 1
