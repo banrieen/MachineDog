@@ -1,0 +1,100 @@
+# perf-env datas
+
+PLATFORM_VERSION: "v1.0.0"
+TEST_TAG: "rc0"
+ENV: 
+  INFO: "office_test_lab: perf-env"
+  HOST: "http://192.168.1.18"
+  Prometheus_Client: http://192.168.1.18:9091
+  CONF_PATH: "/home/InstallationYTung"
+
+
+ACCOUNT:
+  web_admin: {"userName":"admin","password":"fpS6bZ"}
+  testuser: {"userName":"thomas","password":"123456"}
+  ssh_root: {"userName":"root","password":"Aiperf@2025"}
+  token: ""
+  user_id: 1
+  currentRole_id: 1
+  permissionList: ['SUBMIT_TRAINING_JOB', 'VIEW_ALL_USER_JOB', 'VIEW_AND_MANAGE_ALL_USERS_JOB', 'VIEW_CLUSTER_STATUS', 'MANAGE_USER', 'AI_ARTS_ALL', 'LABELING_IMAGE', 'DISPATCH_LABELING_TASK',  'REVIEW_LABELING_TASK', 'MANAGE_VC', 'MANAGE_JOBS', 'MANAGE_PRIVILEGE_JOB', 'SUBMIT_PRIVILEGE_JOB', 'VIEW_VC']
+  CSV_PATH: "datasetshub/perf-env_fake_user.csv"
+
+TEST_DATAS:
+  CVAT_API:  "http://192.168.1.185:8018/swagger/index.html#/"
+  QIP_API:   "https://apulis-gitlab.apulis.cn/apulis/aiarts-pro-backend/-/blob/develop/docs/api_2.0.md"
+  MODELSETS: ""
+  DATASETS: 
+    test: ""
+    huawei: ""
+  IMAGESETS: ""
+  
+RESTFULAPI:
+  header:   {"Content-Type":"application/json;charset=UTF-8", "Accept-Language":"en-US,en;q=0.9,zh-TW;q=0.8,zh;q=0.7",  "Accept-Encoding":"gzip, deflate",  "Accept":"application/json",  "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"}
+  cookie:    ""
+  homepage: "/"
+  login: 
+    mothed: "post" 
+    path:   "/custom-user-dashboard-backend/auth/login"
+    Response: 200
+  logout: 
+    mothed: "get" 
+    path:   "/custom-user-dashboard-backend/auth/logout"
+    Response: 200
+# Test-Overview
+  get_verview:
+    mothed: "get"
+    path:   "/AIarts/OverView"
+    datas:  {}
+  get_codedev:
+    mothed:  "get"
+    path:    "/ai_arts/api/codes?pageNum=1&pageSize=10&status=all&vcName=platform"
+    datas:  {}
+  get_datasets:
+    mothed:  "get"
+    path:    "/ai_arts/api/datasets/?pageNum=1&pageSize=10&name="
+    datas:   {} 
+  get_train:
+    mothed:  "get"
+    path:    "/ai_arts/api/common/job/summary?jobType=artsTraining&vcName=platform"
+    datas:   {}
+  get_models:
+    mothed:  "get"
+    path:    "/ai_arts/api/models?isAdvance=true&pageNum=1&pageSize=10"
+    datas:   {}
+  get_visualmodels:
+    mothed:  "get"
+    path:    "/ai_arts/api/models?pageNum=1&pageSize=10&name=&use=Avisualis"
+    datas: ""
+  get_inferences:
+    mothed: "get"
+    path:   "/ai_arts/api/inferences/ListInferenceJob?vcName=platform&pageNum=1&pageSize=10"
+    datas:  {}
+  get_edge_inferences:
+    mothed: "get"
+    path:   "/ai_arts/api/edge_inferences?pageNum=1&pageSize=10&jobName=&vcName=platform"
+    datas:  {}
+  get_grafana_query:
+    mothed:  "get"
+    path:    "/endpoints/grafana_zh/api/datasources/proxy/1/api/v1/query_range?query=sum(%20avg%20(k8s_vc_device_total%7Bvc_name%3D%22platform%22%2Cdevice_str%3D%27nvidia.com%2Fgpu%27%7D)%20by(vc_name)%20)&start=1618529920&end=1618551520&step=40"
+    datas:  {}
+  get_grafanadashboard:
+    mothed: "get"
+    path:   "/endpoints/grafana_zh/api/annotations?from=1618529983526&to=1618551583526&dashboardId=4"
+    datas:  {}
+  get_vc_info:
+    mothed:  "get"
+    path:    "/ai_arts/api/vc?vcName=platform"
+    datas:   {}
+  get_platform_config:
+    mothed:  "get"
+    path:    "/AIarts/Setting"
+    datas:   {}
+  get_jobs:
+    mothed: "get"
+    path:   "ai_arts/api/jobs?searchWord=&pageNum=1&pageSize=10&status=all&vcName=platform&jobType=all&orderBy="
+    datas:   {}
+  get_savedimages:
+    mothed: "get"
+    path:   "/ai_arts/api/saved_imgs?pageNum=1&pageSize=10&name="
+    datas:  {}
+    referer: "/AIarts/QIP/basicServices/resourceMonitor"

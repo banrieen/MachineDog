@@ -1,0 +1,10 @@
+execution:
+- executor: locust
+  concurrency: 10
+  ramp-up: 1m
+  iterations: 1000
+  scenario: example
+
+scenarios:
+  example:
+    script: test_overview.py
