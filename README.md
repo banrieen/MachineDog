@@ -37,13 +37,14 @@
 
     1. 拉取已经编译好的镜像
     
-    `docker pull harbor.apulis.cn:8443/testops/machinewolf:latest`
+    `docker pull banrieen/machinewolf`
 
     2. 执行docker
     
     ```bash
-    docker run -d     -p 8088:8080     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     harbor.apulis.cn:8443/testops/machinewolf:latest
-    http://<xxx.xxx.xxx.xxx>:8088 # 打开jupyterlab
+    docker run -d     -p 8088:8080     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
+    # 打开jupyterlab
+    # http://<xxx.xxx.xxx.xxx>:8088 
     ```
 
 * 使用taurus执行locust脚本
@@ -72,10 +73,10 @@
 
 **导出测试报告**
 
-* `testreport/cvat_result.csv_stats.csv`
-* `testreport/cvat_result.csv_stats_history.csv`
-* `testreport/cvat_result.csv_failures.csv`
-* `testreport/cvat_result.csv_exceptions.csv`
+* `testreport/result.csv_stats.csv`
+* `testreport/result.csv_stats_history.csv`
+* `testreport/result.csv_failures.csv`
+* `testreport/result.csv_exceptions.csv`
 
 ### 分支说明
 
