@@ -43,7 +43,7 @@ RESTFULAPI:
 # Test-Overview
   get_verview:
     mothed: "get"
-    path:   "/AIarts/OverView"
+    path:   "/custom-user-dashboard-backend/auth/currentUser"
     datas:  {}
   get_codedev:
     mothed:  "get"
@@ -87,7 +87,7 @@ RESTFULAPI:
     datas:   {}
   get_platform_config:
     mothed:  "get"
-    path:    "/AIarts/Setting"
+    path:    "/custom-user-dashboard-backend/platform-config"
     datas:   {}
   get_jobs:
     mothed: "get"

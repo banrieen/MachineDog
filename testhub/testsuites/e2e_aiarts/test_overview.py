@@ -87,7 +87,7 @@ class OverviewStatus(TaskSet):
     @task(1)
     def test_get_codedev(self):
         """ testcase
-        1. 查看工业质检项目类型
+        1. 查看代码开发环境
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_codedev"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_codedev"]["path"],
@@ -107,7 +107,7 @@ class OverviewStatus(TaskSet):
     @task(0)
     def test_get_train(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看模型训练
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_train"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_train"]["path"],
@@ -117,7 +117,7 @@ class OverviewStatus(TaskSet):
     @task(1)
     def test_get_models(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看预置模型
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_models"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_models"]["path"],
@@ -127,7 +127,7 @@ class OverviewStatus(TaskSet):
     @task(1)
     def test_visualmodels(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看可视化训练
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["visualmodels"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["visualmodels"]["path"],
@@ -147,7 +147,7 @@ class OverviewStatus(TaskSet):
     @task(0)
     def test_get_grafana_query(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看监控请求
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_grafana_query"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_grafana_query"]["path"],
@@ -157,7 +157,7 @@ class OverviewStatus(TaskSet):
     @task(0)
     def test_get_grafanadashboard(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看监控界面
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_grafanadashboard"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_grafanadashboard"]["path"],
@@ -167,7 +167,7 @@ class OverviewStatus(TaskSet):
     @task(1)
     def test_get_vc_info(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看VC配置
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_vc_info"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_vc_info"]["path"],
@@ -177,7 +177,7 @@ class OverviewStatus(TaskSet):
     @task(1)
     def test_get_platform_config(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看平台配置
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_platform_config"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_platform_config"]["path"],
@@ -187,14 +187,14 @@ class OverviewStatus(TaskSet):
     @task(0)
     def test_get_jobs(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看任务
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_jobs"]["mothed"], url=TEST_DATAS["RESTFULAPI"]["get_jobs"]["path"])
 
     @task(0)  
     def test_get_savedimages(self):
         """ testcase
-        1. 查看数据集存储列表
+        1. 查看保存的镜像
          """
         response = self.client.request(TEST_DATAS["RESTFULAPI"]["get_savedimages"]["mothed"], 
                                         url=TEST_DATAS["RESTFULAPI"]["get_savedimages"]["path"],
