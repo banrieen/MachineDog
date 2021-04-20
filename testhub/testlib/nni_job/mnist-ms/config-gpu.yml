@@ -1,0 +1,36 @@
+debug: true
+authorName: default
+experimentName: example_mnist_ms
+trialConcurrency: 1
+maxExecDuration: 1h
+maxTrialNum: 2 
+trainingServicePlatform: dlts
+searchSpacePath: search_space.json
+useAnnotation: false
+tuner:
+  builtinTunerName: TPE
+  classArgs:
+    optimize_mode: maximize
+trial:
+  command: python3 train_nni.py --device_target="GPU" --data_path /home/storage/mnist/MNIST/raw
+  codeDir: .
+  # Device type is an optional field, the system will use the device you have by default
+  # If you have multiple devices, you should specify a device, otherwise the system will use the first device by default
+  # The device type may be like nvidia_gpu_amd64, huawei_npu_arm64, you can find the information in your system dashboard
+  #deviceType: nvidia_gpu_amd64
+
+  # You can specify your device num here
+  deviceNum: 1
+
+  #Docker image to run the job
+  image: harbor.sigsus.cn:8443/sz_gongdianju/apulistech/mindspore:nni
+
+  # If you are using NPU device, the framework type is required, the current supported types are tensorflow, pytorch and mindspore
+  # If yor are not using NPU device, please specifying none here  
+  frameworkType: none
+dltsConfig:
+  #Your dashboard uri
+  dashboard: http://192.168.1.181/
+  
+  #Your cluster name
+  cluster: DLWorkspace
