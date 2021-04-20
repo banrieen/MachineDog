@@ -1,7 +1,5 @@
 # NNI示例
 
-[English Doc](README.md)
-
 
 ## 介绍
 - NNI (Neural Network Intelligence) 是一个工具包，可有效的帮助用户设计并调优机器学习模型的神经网络架构，复杂系统的参数（如超参）等。
@@ -10,8 +8,6 @@
 
 
 ## 目录
-
-- mnist-ms：mindspore示例
 
 - mnist-pytorch：pytorch示例
 
