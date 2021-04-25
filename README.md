@@ -42,7 +42,7 @@
     2. 执行docker
     
     ```bash
-    docker run -d     -p 8088:8080     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
+    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
     # 打开jupyterlab
     # http://<xxx.xxx.xxx.xxx>:8088 
     ```
