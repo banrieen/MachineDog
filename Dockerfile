@@ -29,8 +29,11 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
     && sudo curl -fsSL https://deno.land/x/install/install.sh | sh   \
     && sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh \
+    && export DENO_INSTALL="/root/.deno"  \
+    && echo export PATH="$PATH:/root/.cargo/bin:$DENO_INSTALL/bin:" >>  /etc/profile  \
+    && source /etc/profile  \
     && rm -rf /tmp/* 
-
+    
 # port
 # EXPOSE 1099 8080 8088 8089
 
