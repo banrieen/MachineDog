@@ -25,7 +25,7 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && cd /home/MachineWolf/  \
     && git pull origin master  \
     && pip install python-dev-tools  \
-    && pip install -U --ignore-installed -r /home/MachineWolf/requirements.ini \ 
+    && pip install -U -r /home/MachineWolf/requirements.ini \ 
     && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
     && sudo curl -fsSL https://deno.land/x/install/install.sh | sh   \
     && sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh \
