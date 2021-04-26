@@ -17,13 +17,14 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list  \
     && sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list  \
     && sudo apt update    \ 
-    && sudo apt install -y rustc \
+    && sudo apt install -y rustc zip \
     && wget https://dl.google.com/go/go1.16.3.linux-amd64.tar.gz   \  
     && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz   \
     && export PATH=$PATH:/usr/local/go/bin   \
     && git clone -b master https://github.com/banrieen/MachineWolf.git   \
     && cd /home/MachineWolf/  \
     && git pull origin master  \
+    && python -m pip install -U pip  \
     && pip install python-dev-tools  \
     && pip install -U -r /home/MachineWolf/requirements.ini \ 
     && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
