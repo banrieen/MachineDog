@@ -25,7 +25,7 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && go env -w GOPROXY=https://goproxy.cn,direct  \
     && pip config set global.index-url https://repo.huaweicloud.com/repository/pypi/simple   \
     && pip config set install.trusted-host https://repo.huaweicloud.com  \
-    && git clone -b master https://haiyuan.bian:apulis18c@apulis-gitlab.apulis.cn/apulis/MachineWolf.git   \
+    && git clone -b master https://github.com/banrieen/MachineWolf.git   \
     && cd /home/MachineWolf/  \
     && git pull origin master  \
     && pip install python-dev-tools  \

@@ -21,7 +21,7 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && wget https://dl.google.com/go/go1.16.3.linux-amd64.tar.gz   \  
     && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz   \
     && export PATH=$PATH:/usr/local/go/bin   \
-    && git clone -b master https://haiyuan.bian:apulis18c@apulis-gitlab.apulis.cn/apulis/MachineWolf.git   \
+    && git clone -b master https://github.com/banrieen/MachineWolf.git   \
     && cd /home/MachineWolf/  \
     && git pull origin master  \
     && pip install python-dev-tools  \
