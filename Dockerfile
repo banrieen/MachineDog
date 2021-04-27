@@ -17,7 +17,7 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list  \
     && sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list  \
     && sudo apt update    \ 
-    && sudo apt install -y rustc zip \
+    && sudo apt install -y rustc zip unzip  \
     && wget https://dl.google.com/go/go1.16.3.linux-amd64.tar.gz   \  
     && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz   \
     && export PATH=$PATH:/usr/local/go/bin   \
