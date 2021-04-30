@@ -31,6 +31,7 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && export DENO_INSTALL="/root/.deno"  \
     && echo "export PATH=$PATH:/root/.cargo/bin:$DENO_INSTALL/bin" >> /etc/profile  \
     && source /etc/profile  \
+    && find . -regex "./[0-9]+" | xargs rm -rf \
     && rm -rf /tmp/* 
     
 # port
