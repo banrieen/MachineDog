@@ -31,7 +31,6 @@ jobs:
         with:
            fail_ci_if_error: true
            token: ${{ secrets.CODECOV_TOKEN }}
-           files: ./coverage1.xml,./coverage2.xml
            directory: ./coverage/reports/
       - name: Execute example testcases
         run: |
