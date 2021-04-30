@@ -14,8 +14,6 @@ WORKDIR /home/
 
 
 RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
-    && sudo sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list  \
-    && sudo sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list  \
     && sudo apt update    \ 
     && sudo apt install -y rustc zip unzip  \
     && wget https://dl.google.com/go/go1.16.3.linux-amd64.tar.gz   \  
@@ -28,10 +26,11 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && pip install python-dev-tools  \
     && pip install --ignore-installed -r /home/MachineWolf/requirements.ini \ 
     && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
+    && sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  -s -- -y  \
     && sudo curl -fsSL https://deno.land/x/install/install.sh | sh   \
-    && sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh \
     && export DENO_INSTALL="/root/.deno"  \
-    && export PATH=$PATH:/root/.cargo/bin:$DENO_INSTALL/bin  \
+    && echo "export PATH=$PATH:/root/.cargo/bin:$DENO_INSTALL/bin" >> /etc/profile  \
+    && source /etc/profile  \
     && rm -rf /tmp/* 
     
 # port
