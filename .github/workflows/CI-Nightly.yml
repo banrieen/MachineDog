@@ -16,15 +16,22 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: pylint
-        uses: cclauss/GitHub-Action-for-pylint@0.7.0
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ hashFiles('dev-requirements.txt') }}
+
       - name: Execute example testcases
         run: |
             ls -l
             pip install --upgrade pip
-            pip install --no-deps -r requirements.ini
+            pip install -r requirements.ini
             locust --version
             locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf 
+      - name: pylint
+        uses: cclauss/GitHub-Action-for-pylint@0.7.0
+        
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
