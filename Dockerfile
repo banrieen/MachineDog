@@ -30,7 +30,7 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && sudo curl -fsSL https://deno.land/x/install/install.sh | sh   \
     && export DENO_INSTALL="/root/.deno"  \
     && echo "export PATH=$PATH:/root/.cargo/bin:$DENO_INSTALL/bin" >> /etc/profile  \
-    && source /etc/profile  \
+    && sudo /bin/bash -c "source /etc/profile" \
     && find . -regex "./[0-9]+" | xargs rm -rf \
     && rm -rf /tmp/* 
     
