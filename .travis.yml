@@ -21,8 +21,8 @@ matrix:
       after_script:
         - bash <(curl -s https://codecov.io/bash)
 
-    - language: r
-      r_packages:
-        - covr
-      after_success:
-        - Rscript -e 'library(covr); codecov()'
+    # - language: r
+    #   r_packages:
+    #     - covr
+    #   after_success:
+    #     - Rscript -e 'library(covr); codecov()'
