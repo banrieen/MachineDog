@@ -9,11 +9,11 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: CodeQL
+name: "CodeQL"
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
     paths-ignore:
       - '*.md'
       - 'docs/*.md'
@@ -29,6 +29,10 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
 
     strategy:
       fail-fast: false
@@ -47,7 +51,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        python-version: ${{ matrix.python-version }}
+        languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
         # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
