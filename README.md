@@ -10,7 +10,7 @@
 ![Issues track](https://img.shields.io/github/issues/apulis/MachineWolf)
 [![Gitter](https://badges.gitter.im/banrieen/MachineWolfHome.svg)](https://gitter.im/banrieen/MachineWolfHome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![codecov](https://codecov.io/gh/banrieen/MachineWolf/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineWolf)
-[![Build Status](https://travis-ci.org/banrieen/MachineWolf.svg?branch=master)](https://travis-ci.org/banrieen/MachineWolf)
+[![Build Status](https://www.travis-ci.com/banrieen/MachineWolf.svg?branch=master)](https://www.travis-ci.com/banrieen/MachineWolf)
 
 
 <!-- ![GitHub Latest download](https://img.shields.io/github/downloads/apulis/MachineWolf/latest/total?style=plastic) -->
