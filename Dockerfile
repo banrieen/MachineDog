@@ -24,7 +24,6 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && git clone -b master https://github.com/banrieen/MachineWolf.git   \
     && cd /home/MachineWolf/  \
     && git pull origin master  \
-    && python -m pip install -U pip  \
     && pip install python-dev-tools  \
     && pip install -U -r /home/MachineWolf/requirements.ini \ 
     && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
