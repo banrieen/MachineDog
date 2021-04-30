@@ -24,10 +24,8 @@ jobs:
 
       - name: Execute example testcases
         run: |
-            ls -l
             pip install --upgrade pip
             pip install -r requirements.ini
-            locust --version
             locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf 
       - name: pylint
         uses: cclauss/GitHub-Action-for-pylint@0.7.0
