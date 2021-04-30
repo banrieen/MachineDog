@@ -1,24 +1,28 @@
 env:
   - SH=bash
-language: python
-python:
-  - "3.6"      # current default Python on Travis CI
-# command to install dependencies
-install:
-  - pip install -r requirements.ini
-  - pip install codecov
-# command to run tests
-before_script:
-  - mkdir -p testresult
-script:
-  - locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
-after_script:
-  - bash <(curl -s https://codecov.io/bash)
+matrix:
+  include:
+    - language: python
+      python:
+        - "3.6"      # current default Python on Travis CI
 
-language: r
+      # command to install dependencies
+      install:
+        - pip install -r requirements.ini
+        - pip install codecov
+        - sudo apt-get install -y r-base
+        - echo 'source("https://bioconductor.org/biocLite.R"); biocLite("S4Vectors"); biocLite("GenomicRanges")' > install.R
 
-r_packages:
-  - covr
+      # command to run tests
+      before_script:
+        - mkdir -p testresult
+      script:
+        - locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
+      after_script:
+        - bash <(curl -s https://codecov.io/bash)
 
-after_success:
-  - Rscript -e 'library(covr); codecov()'
+    - language: r
+      r_packages:
+        - covr
+      after_success:
+        - Rscript -e 'library(covr); codecov()'
