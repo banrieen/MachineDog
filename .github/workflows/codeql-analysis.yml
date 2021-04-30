@@ -14,6 +14,11 @@ name: CodeQL
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - '*.md'
+      - 'docs/*.md'
+      - 'docs/*/*.md'
+      - '*.ini'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [master]
@@ -28,6 +33,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        language: ['javascript', 'python']
         python-version: [3.8]
         # CodeQL supports [ $supported-codeql-languages ]
         # Learn more:
