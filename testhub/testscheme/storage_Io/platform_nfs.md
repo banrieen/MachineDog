@@ -9,7 +9,7 @@
 
 * 各节点使用相同的（master节点业务层）IP访问NFS，也是平台WEB对外的访问IP
 
-* 训练POD采用的时hostnetwork,分布式训练任务不通节点之间ssh，加载数据的链接都是走相同的业务层IP：
+* 训练POD采用的是 hostport, 分布式训练任务不同节点之间ssh，加载数据的链接都是走相同的业务层IP：
 
 ```bash
 thomas@6eb6069f-3629-4c31-a29a-45690d38f848-ps0:~$ cat /etc/hosts 
