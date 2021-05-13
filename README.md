@@ -19,7 +19,7 @@
 [![nightly-build Actions Status](https://github.com/apulis/MachineWolf/workflows/nightly-build/badge.svg)](https://github.com/apulis/MachineWolf/actions) -->
 
 
-[MachineWolf Doc](README_en_US.md) | [简体中文](https://machinewolf.readthedocs.io/en/latest/)
+[English Doc](README_en_US.md) | [简体中文](https://machinewolf.readthedocs.io/en/latest/)
 
 **MachineWolf** 是一个自动化测试性能套件，促进 AiOps 实施。
 
