@@ -49,7 +49,7 @@ EXPOSE 1099 8088 8089
 # ENTRYPOINT ["jupyter", "lab", "--NotebookApp.token=''",  "--port 8088 ", "--no-browser",  "--ip=0.0.0.0",  "--allow-root",  "--NotebookApp.iopub_msg_rate_limit=1000000.0",  "--NotebookApp.iopub_data_rate_limit=100000000.0",  "--NotebookApp.notebook_dir=MachineWolf"]
 
 # Build  example
-# docker build -f MachineWolf/Dockerfile-opebsuse.dockerfile .  -t  harbor.apulis.cn:8443/testops/machinewolf-opebsuse:latest
-# docker push harbor.apulis.cn:8443/testops/machinewolf-opebsuse:latest
+# docker build -f MachineWolf/Dockerfile-opebsuse.dockerfile .  -t  machinewolf-opebsuse:latest
+# docker push machinewolf-opebsuse:latest
 # Run example
-# docker run -d --name MachineWolf-jupyter -p 8099:8088  harbor.apulis.cn:8443/testops/machinewolf-opebsuse:latest
+# docker run -d --name MachineWolf-jupyter -p 8099:8088  machinewolf-opebsuse:latest

@@ -36,9 +36,5 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     
 # port
 # EXPOSE 1099 8080 8088 8089
-
-# Build  example
-# docker build -f MachineWolf/Dockerfile .  -t  harbor.apulis.cn:8443/testops/machinewolf:latest
-# docker push harbor.apulis.cn:8443/testops/machinewolf:latest
 # Run example
 # docker run -d     -p 8088:8080     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"   --shm-size 2048m     --restart always     harbor.apulis.cn:8443/testops/machinewolf:latest
