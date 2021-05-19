@@ -6,12 +6,14 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Documentation Status](https://readthedocs.org/projects/machinewolf/badge/?version=latest)](https://machinewolf.readthedocs.io/en/latest/?badge=latest)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/apulis/MachineWolf)
+<!-- ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/apulis/MachineWolf) -->
 ![Issues track](https://img.shields.io/github/issues/apulis/MachineWolf)
 [![Gitter](https://badges.gitter.im/banrieen/MachineWolfHome.svg)](https://gitter.im/banrieen/MachineWolfHome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![codecov](https://codecov.io/gh/banrieen/MachineWolf/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineWolf)
 [![Travis](https://www.travis-ci.com/banrieen/MachineWolf.svg?branch=master)](https://www.travis-ci.com/banrieen/MachineWolf)
 [![Nightly-Build](https://github.com/banrieen/MachineWolf/actions/workflows/CI-Nightly.yml/badge.svg)](https://github.com/banrieen/MachineWolf/actions/workflows/CI-Nightly.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/banrieen/machinewolf)
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/banrieen/machinewolf)
 
 
 <!-- ![GitHub Latest download](https://img.shields.io/github/downloads/apulis/MachineWolf/latest/total?style=plastic) -->
@@ -19,14 +21,19 @@
 [![nightly-build Actions Status](https://github.com/apulis/MachineWolf/workflows/nightly-build/badge.svg)](https://github.com/apulis/MachineWolf/actions) -->
 
 
-[English Doc](README_en_US.md) | [简体中文](https://machinewolf.readthedocs.io/en/latest/)
+[English Doc](README.md) | [简体中文](README_zh_CN.md)
 
-**MachineWolf** is a Test Studio for AI 、Deep Learning or Machine Learning framwork、platform. As the Best-Practice about AIops  or MLOps.
+**MachineWolf** 是一个自动化测试性能套件，促进 AiOps 实施。
 
+🍃 🍂 🍁 🍄 🐚 🍀 🌾 💐 🌷🦥 🐁 🐀 🐿 🦔 🐾 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🌱
 
-### Quickly Start
+**😄 点个 Star , 手留余香，个人维护，请多多支持，不胜感激！🍻 🥂💕 💞 💓**
 
-* Runing script at local PC
+🌼 🌻 🌞 🌝 🌛🌈 ☀️ 🌤 ⛅️ 🌥🌏 🪐 💫 ⭐️ 🌟 ✨ 🍐 🍊 🍋 🍌 🍉 🍇 🍓
+
+### 快速使用指导
+
+* 在本地执行测试脚本
 
     ```bash
     sudo chmod +x init_dev.sh
@@ -34,55 +41,55 @@
     locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
     ```
 
-* Execute testsuites in docker container
+* 在docker环境中执行testsuites
 
-    1. Pull the images from docker-hub
+    1. 拉取已经编译好的镜像
     
     `docker pull banrieen/machinewolf`
 
-    2. Start container
+    2. 执行docker
     
     ```bash
     docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
-    # Open web IDE
+    # 打开jupyterlab
     # http://<xxx.xxx.xxx.xxx>:8088 
     ```
 
-* Running locust scripts by taurus
+* 使用taurus执行locust脚本
 
     `bzt example/taurus/quick_test.yml`
 
-* Running jmeter scripts by taurus
+* 使用taurus执行jmeter脚本
 
     `bzt example/jmeter/trace_user_footprint.jmx`
 
-* Running yaml scripts by taurus 
+* 使用taurus执行纯yaml脚本
 
     `bzt example/taurus/quick_test.yml`
 
-* Runing pytest testsuites, such as non-api， HA， throughput test scripts
+* 使用pytest执行非接口类的脚本，比如ha,吞吐量测试集等
 
     `pytest example/pytest/test_ha.py`
 
-**Example of testreport**
+**测试报告示例**
 
 ![locust-http-response](docs/static/locust_report.png)
 
-**CLI dashboard**
+**CLI看板示例**
 
 ![taurus-status](docs/static/taurus_report.png)
 
-**Export testreport**
+**导出测试报告**
 
 * `testreport/result.csv_stats.csv`
 * `testreport/result.csv_stats_history.csv`
 * `testreport/result.csv_failures.csv`
 * `testreport/result.csv_exceptions.csv`
 
-### About branch
+### 分支说明
 
 
-| Branch name |Info|
+| 分支名称     |说明|
 | ----------- | -------------------------------------------------------------------- |
 | Master      | 主分支，维护发布产品的最新发布代码，从Release 或 Feature 合并为正式发布的历史|
 | Feature     | 开自Master分支，主要用于开发新功能的或专项的测试集，根据负责模块自行维护；命名规范为：feature/#...，每一个功能都应对应一个issue，...即为issue号. |
@@ -100,14 +107,14 @@
 * 所有经过调试，完成验证的 Feature、Hotfix、Release 都要合并到 Master
 
 
-### About testsuites
+### 测试套件说明
 
 * aisetshub:    模型验证相关
 * datasetshub:  数据集验证相关
 * testhub:      平台、组件测试案例和脚本
 * issuesboard:  同步issues和report
 
-### Schema of test studio
+### 测试集结构
 
 测试套件本着兼容并蓄，容纳萃取的宗旨，独立灵活的组织测试套件。支持各种前沿的、优秀的工具和理念；目前将测试方案（testscheme）、数据(datas.yaml)、脚本(.py,.jmx)、执行计划（host.yml,taurus.yml）灵活的组织在一起。
 目前还是一些样例，还需要完善和补充。
@@ -133,7 +140,7 @@
         |-- csv_client
 ```
 
-### Security
+### 安全性
 
 为避免信息暴漏，无效信息泛滥。
 
@@ -147,11 +154,11 @@
     + 证书： `<KEYGEN> 或 <TOKEN>`
     + 邮件： `<EMAIL-NAME@EMAIL-SERVICE.COM>`
 
-### Documents 
+### 文档 
 
 有关安装指南、教程和API的更多详细信息，请参阅[文档库](docs/zh_CN)
 
-### Release
+### 版本发布
 
 * **Latest**
 
@@ -170,11 +177,11 @@
 
 **版本说明详情请参阅[RELEASE](./RELEASE.md)。**
 
-### License
+### 版权协议
 
 [MIT](LICENSE)
 
-### Comunity
+### 社区和联系
 
 欢迎大家把问题、建议提到 github issues
 * [Gitter讨论组](https://gitter.im/banrieen/MachineWolfHome?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
