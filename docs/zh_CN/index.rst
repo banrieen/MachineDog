@@ -8,6 +8,47 @@ Welcome to MachineWolf's documentation!
 
 **MachineWolf** 是一个自动化测试性能套件，促进 AiOps 实施。
 
+快速使用指导
+----------------
+
+* 在本地执行测试脚本
+
+    ```bash
+    sudo chmod +x init_dev.sh
+    bash ./init_dev.sh
+    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
+    ```
+
+* 在docker环境中执行testsuites
+
+    1. 拉取已经编译好的镜像
+    
+    `docker pull banrieen/machinewolf`
+
+    2. 执行docker
+    
+    ```bash
+    docker run -d     -p 8088:8080  -p 8090:8090  --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
+    # 打开jupyterlab
+    # http://<xxx.xxx.xxx.xxx>:8088 
+    ```
+
+* 使用taurus执行locust脚本
+
+    `bzt example/taurus/quick_test.yml`
+
+* 使用taurus执行jmeter脚本
+
+    `bzt example/jmeter/trace_user_footprint.jmx`
+
+* 使用taurus执行纯yaml脚本
+
+    `bzt example/taurus/quick_test.yml`
+
+* 使用pytest执行非接口类的脚本，比如ha,吞吐量测试集等
+
+    `pytest example/pytest/test_ha.py`
+
 测试套件
 ----------------
 
