@@ -25,19 +25,19 @@ RUN sudo cp -a /etc/apt/sources.list /etc/apt/sources.list.bak  \
     && go env -w GOPROXY=https://goproxy.cn,direct  \
     && pip config set global.index-url https://repo.huaweicloud.com/repository/pypi/simple   \
     && pip config set install.trusted-host https://repo.huaweicloud.com  \
-    && git clone -b master https://github.com/banrieen/MachineWolf.git   \
-    && cd /home/MachineWolf/  \
+    && git clone -b master https://github.com/banrieen/MachineDevil.git   \
+    && cd /home/MachineDevil/  \
     && git pull origin master  \
     && pip install python-dev-tools  \
-    && pip install -U --ignore-installed -r /home/MachineWolf/requirements.ini \ 
-    && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
+    && pip install -U --ignore-installed -r /home/MachineDevil/requirements.ini \ 
+    && bzt /home/MachineDevil/example/jmeter/trace_user_footprint.jmx  \
     && rm -rf /tmp/* 
 
 # port
 EXPOSE 1099 8080
 
 # Build  example
-# docker build -f MachineWolf/Dockerfile .  -t  machinewolf:latest
-# docker push machinewolf:latest
+# docker build -f MachineDevil/Dockerfile .  -t  MachineDevil:latest
+# docker push MachineDevil:latest
 # Run example
-# docker run -d     -p 8088:8080     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"   --shm-size 2048m     --restart always     machinewolf:latest
+# docker run -d     -p 8088:8080     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"   --shm-size 2048m     --restart always     MachineDevil:latest

@@ -15,7 +15,7 @@ ENV PYTHON_HOME  /usr/bin/python3
 WORKDIR /home/
 
 # 同步测试库和工具
-COPY MachineWolf docker-build/jdk-8u281-linux-x64.rpm  /home/MachineWolf/
+COPY MachineDevil docker-build/jdk-8u281-linux-x64.rpm  /home/MachineDevil/
 
 RUN mkdir /etc/zypp/repos.d/repo_bak && mv /etc/zypp/repos.d/*.repo /etc/zypp/repos.d/repo_bak/  \
     && zypper ar -fcg https://mirrors.bfsu.edu.cn/opensuse/distribution/leap/15.2/repo/non-oss/     NON-OSS  \
@@ -29,15 +29,15 @@ RUN mkdir /etc/zypp/repos.d/repo_bak && mv /etc/zypp/repos.d/*.repo /etc/zypp/re
     && zypper -q ref   \  
     && zypper update -y && zypper install -y gcc cmake git sudo python3 bash go rust vim htop iputils curl busybox wget tar gzip unzip curl python3-devel    \
     && go env -w GOPROXY=https://goproxy.cn,direct  \
-    && rpm -ivh /home/MachineWolf/jdk-8u281-linux-x64.rpm   \
+    && rpm -ivh /home/MachineDevil/jdk-8u281-linux-x64.rpm   \
     && curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py  \
     && python3 get-pip.py   \
     && ln -s /usr/bin/python3 /usr/bin/python  \
     && pip config set global.index-url https://repo.huaweicloud.com/repository/pypi/simple   \
     && pip config set install.trusted-host https://repo.huaweicloud.com  \
     && pip install python-dev-tools  \
-    && pip install -U -r /home/MachineWolf/requirements.ini \ 
-    && bzt /home/MachineWolf/example/jmeter/trace_user_footprint.jmx  \
+    && pip install -U -r /home/MachineDevil/requirements.ini \ 
+    && bzt /home/MachineDevil/example/jmeter/trace_user_footprint.jmx  \
     && export SHELL=/bin/bash \
     && rm -rf /tmp/* 
 
@@ -45,11 +45,11 @@ RUN mkdir /etc/zypp/repos.d/repo_bak && mv /etc/zypp/repos.d/*.repo /etc/zypp/re
 EXPOSE 1099 8088 8089
 
 # ENTRYPOINT 
-# ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--port 8088 ", "--allow-root", "--NotebookApp.notebook_dir=MachineWolf"]
-# ENTRYPOINT ["jupyter", "lab", "--NotebookApp.token=''",  "--port 8088 ", "--no-browser",  "--ip=0.0.0.0",  "--allow-root",  "--NotebookApp.iopub_msg_rate_limit=1000000.0",  "--NotebookApp.iopub_data_rate_limit=100000000.0",  "--NotebookApp.notebook_dir=MachineWolf"]
+# ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--port 8088 ", "--allow-root", "--NotebookApp.notebook_dir=MachineDevil"]
+# ENTRYPOINT ["jupyter", "lab", "--NotebookApp.token=''",  "--port 8088 ", "--no-browser",  "--ip=0.0.0.0",  "--allow-root",  "--NotebookApp.iopub_msg_rate_limit=1000000.0",  "--NotebookApp.iopub_data_rate_limit=100000000.0",  "--NotebookApp.notebook_dir=MachineDevil"]
 
 # Build  example
-# docker build -f MachineWolf/Dockerfile-opebsuse.dockerfile .  -t  machinewolf-opebsuse:latest
-# docker push machinewolf-opebsuse:latest
+# docker build -f MachineDevil/Dockerfile-opebsuse.dockerfile .  -t  MachineDevil-opebsuse:latest
+# docker push MachineDevil-opebsuse:latest
 # Run example
-# docker run -d --name MachineWolf-jupyter -p 8099:8088  machinewolf-opebsuse:latest
+# docker run -d --name MachineDevil-jupyter -p 8099:8088  MachineDevil-opebsuse:latest
