@@ -5,25 +5,24 @@
 -----------
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Documentation Status](https://readthedocs.org/projects/machinewolf/badge/?version=latest)](https://machinewolf.readthedocs.io/en/latest/?badge=latest)
-<!-- ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/apulis/MachineWolf) -->
-![Issues track](https://img.shields.io/github/issues/apulis/MachineWolf)
-[![Gitter](https://badges.gitter.im/banrieen/MachineWolfHome.svg)](https://gitter.im/banrieen/MachineWolfHome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![codecov](https://codecov.io/gh/banrieen/MachineWolf/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineWolf)
-[![Travis](https://www.travis-ci.com/banrieen/MachineWolf.svg?branch=master)](https://www.travis-ci.com/banrieen/MachineWolf)
-[![Nightly-Build](https://github.com/banrieen/MachineWolf/actions/workflows/CI-Nightly.yml/badge.svg)](https://github.com/banrieen/MachineWolf/actions/workflows/CI-Nightly.yml)
-![Docker Pulls](https://img.shields.io/docker/pulls/banrieen/machinewolf)
-![Docker Image Version (latest by date)](https://img.shields.io/docker/v/banrieen/machinewolf)
+[![Documentation Status](https://readthedocs.org/projects/machinedevil/badge/?version=latest)](https://machinedevil.readthedocs.io/zh_CN/latest/?badge=latest)
+![Issues track](https://img.shields.io/github/issues/banrieen/MachineDevil)
+<!-- ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/banrieen/MachineDevil) -->
+<!-- [![Gitter](https://badges.gitter.im/MachineDevil/community.svg)](https://gitter.im/MachineDevil/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![codecov](https://codecov.io/gh/banrieen/MachineDevil/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineDevil) -->
+<!-- [![Travis](https://www.travis-ci.com/banrieen/MachineDevil.svg?branch=master)](https://www.travis-ci.com/banrieen/MachineDevil) -->
+[![Nightly-Build](https://github.com/banrieen/MachineDevil/actions/workflows/CI-Nightly.yml/badge.svg)](https://github.com/banrieen/MachineDevil/actions/workflows/CI-Nightly.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/banrieen/MachineDevil)
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/banrieen/MachineDevil)
 
 
-<!-- ![GitHub Latest download](https://img.shields.io/github/downloads/apulis/MachineWolf/latest/total?style=plastic) -->
-<!-- [![codeql-analysis Actions Status](https://github.com/apulis/MachineWolf/workflows/codeql-analysis/badge.svg)](https://github.com/apulis/MachineWolf/actions)
-[![nightly-build Actions Status](https://github.com/apulis/MachineWolf/workflows/nightly-build/badge.svg)](https://github.com/apulis/MachineWolf/actions) -->
+<!-- ![GitHub Latest download](https://img.shields.io/github/downloads/banrieen/MachineDevil/latest/total?style=plastic) -->
+<!-- [![codeql-analysis Actions Status](https://github.com/banrieen/MachineDevil/workflows/codeql-analysis/badge.svg)](https://github.com/banrieen/MachineDevil/actions)
+[![nightly-build Actions Status](https://github.com/banrieen/MachineDevil/workflows/nightly-build/badge.svg)](https://github.com/banrieen/MachineDevil/actions) -->
 
 
 [English Doc](README.md) | [简体中文](README_zh_CN.md)
 
-**MachineWolf** 是一个自动化测试性能套件，促进 AiOps 实施。
+**MachineDevil** 是一个自动化测试性能套件，促进 AiOps 实施。
 
 🍃 🍂 🍁 🍄 🐚 🍀 🌾 💐 🌷🦥 🐁 🐀 🐿 🦔 🐾 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🌱
 
@@ -45,12 +44,12 @@
 
     1. 拉取已经编译好的镜像
     
-    `docker pull banrieen/machinewolf`
+    `docker pull banrieen/MachineDevil`
 
     2. 执行docker
     
     ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
+    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
     # 打开jupyterlab
     # http://<xxx.xxx.xxx.xxx>:8088 
     ```
@@ -70,14 +69,6 @@
 * 使用pytest执行非接口类的脚本，比如ha,吞吐量测试集等
 
     `pytest example/pytest/test_ha.py`
-
-**测试报告示例**
-
-![locust-http-response](docs/static/locust_report.png)
-
-**CLI看板示例**
-
-![taurus-status](docs/static/taurus_report.png)
 
 **导出测试报告**
 
@@ -184,7 +175,7 @@
 ### 社区和联系
 
 欢迎大家把问题、建议提到 github issues
-* [Gitter讨论组](https://gitter.im/banrieen/MachineWolfHome?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-* [#Machinewolf tag on StackOverflow](https://stackoverflow.com/search?q=%23Machinewolf)
+* [Gitter讨论组](https://gitter.im/banrieen/MachineDevilHome?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+* [#MachineDevil tag on StackOverflow](https://stackoverflow.com/search?q=%23MachineDevil)
 * Twitter @MachinWolf
 * QQ群 868444294 
