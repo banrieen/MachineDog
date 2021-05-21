@@ -1,12 +1,12 @@
-.. MachineWolf documentation master file, created by
+.. MachineDevil documentation master file, created by
    sphinx-quickstart on Sun Mar 28 23:34:35 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MachineWolf's documentation!
+Welcome to MachineDevil's documentation!
 =======================================
 
-**MachineWolf** 是一个自动化测试性能套件，促进 AiOps 实施。
+**MachineDevil** 是一个自动化测试性能套件，促进 AiOps 实施。
 
 快速使用指导
 ----------------
@@ -23,12 +23,12 @@ Welcome to MachineWolf's documentation!
 
     1. 拉取已经编译好的镜像
     
-    `docker pull banrieen/machinewolf`
+    `docker pull banrieen/MachineDevil`
 
     2. 执行docker
     
     ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090  --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
+    docker run -d     -p 8088:8080  -p 8090:8090  --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
     # 打开jupyterlab
     # http://<xxx.xxx.xxx.xxx>:8088 
     ```
