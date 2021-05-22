@@ -1,9 +1,3 @@
-<p align="center">
-<img src="docs/static/ico.png" width="150"/>
-</p>
-
------------
-
 [![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Documentation Status](https://readthedocs.org/projects/machinedevil/badge/?version=latest)](https://machinedevil.readthedocs.io/zh_CN/latest/?badge=latest)
 ![Issues track](https://img.shields.io/github/issues/banrieen/MachineDevil)
@@ -21,6 +15,8 @@
 
 
 [English Doc](README.md) | [简体中文](README_zh_CN.md)
+
+基于 apulis/MachineWolf
 
 **MachineDevil** 是一个自动化测试性能套件，促进 AiOps 实施。
 
@@ -177,5 +173,10 @@
 欢迎大家把问题、建议提到 github issues
 * [Gitter讨论组](https://gitter.im/banrieen/MachineDevilHome?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 * [#MachineDevil tag on StackOverflow](https://stackoverflow.com/search?q=%23MachineDevil)
-* Twitter @MachinWolf
+* 微信公共号： @MachineDevil
+
+<p align="left">
+<img src="docs/static/wechat_public.jpg" width="150"/>
+</p>
+
 * QQ群 868444294 

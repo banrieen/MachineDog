@@ -1,9 +1,3 @@
-<p align="center">
-<img src="docs/static/ico.png" width="150"/>
-</p>
-
------------
-
 [![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Documentation Status](https://readthedocs.org/projects/machinedevil/badge/?version=latest)](https://machinedevil.readthedocs.io/zh_CN/latest/?badge=latest)
 ![Issues track](https://img.shields.io/github/issues/banrieen/MachineDevil)
@@ -21,6 +15,8 @@
 
 
 [English Doc](README.md) | [简体中文](README_zh_CN.md)
+
+Base on apulis/MachineWolf!
 
 **MachineDevil** is a Test Studio for AI 、Deep Learning or Machine Learning framwork、platform. As the Best-Practice about AIops  or MLOps.
 
@@ -178,5 +174,11 @@ Welcome everyone to mention questions and suggestions to github issues
 
 * [Gitter Discussion group](https://gitter.im/banrieen/MachineDevilHome?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 * [#MachineDevil tag on StackOverflow](https://stackoverflow.com/search?q=%23MachineDevil)
-* Twitter @MachinWolf
+* Twitter @MachinDevil
+* wechat public
+
+<p align="left">
+<img src="docs/static/wechat_public.jpg" width="150"/>
+</p>
+
 * QQ group 868444294 
