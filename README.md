@@ -164,10 +164,6 @@ For more detailed information about installation guides, tutorials and APIs, ple
 
 **Please refer to the release notes for details[RELEASE](./RELEASE.md)。**
 
-### License
-
-[MIT](LICENSE)
-
 ### Comunity
 
 Welcome everyone to mention questions and suggestions to github issues
@@ -175,7 +171,7 @@ Welcome everyone to mention questions and suggestions to github issues
 * [Gitter Discussion group](https://gitter.im/banrieen/MachineDevilHome?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 * [#MachineDevil tag on StackOverflow](https://stackoverflow.com/search?q=%23MachineDevil)
 * Twitter @MachinDevil
-* wechat public
+* wechat @MachinDevil
 
 <p align="left">
 <img src="docs/static/wechat_public.jpg" width="150"/>

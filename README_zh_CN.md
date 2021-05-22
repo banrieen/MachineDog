@@ -164,10 +164,6 @@
 
 **版本说明详情请参阅[RELEASE](./RELEASE.md)。**
 
-### 版权协议
-
-[MIT](LICENSE)
-
 ### 社区和联系
 
 欢迎大家把问题、建议提到 github issues
