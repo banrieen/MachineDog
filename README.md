@@ -5,8 +5,8 @@
 <!-- [![Gitter](https://badges.gitter.im/MachineDevil/community.svg)](https://gitter.im/MachineDevil/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![codecov](https://codecov.io/gh/banrieen/MachineDevil/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineDevil) -->
 <!-- [![Travis](https://www.travis-ci.com/banrieen/MachineDevil.svg?branch=master)](https://www.travis-ci.com/banrieen/MachineDevil) -->
 [![Nightly-Build](https://github.com/banrieen/MachineDevil/actions/workflows/CI-Nightly.yml/badge.svg)](https://github.com/banrieen/MachineDevil/actions/workflows/CI-Nightly.yml)
-![Docker Pulls](https://img.shields.io/docker/pulls/banrieen/MachineDevil)
-![Docker Image Version (latest by date)](https://img.shields.io/docker/v/banrieen/MachineDevil)
+![Docker Pulls](https://img.shields.io/docker/pulls/banrieen/machinedevil)
+
 
 
 <!-- ![GitHub Latest download](https://img.shields.io/github/downloads/banrieen/MachineDevil/latest/total?style=plastic) -->
