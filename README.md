@@ -28,14 +28,6 @@ Base on apulis/MachineWolf!
 
 ### Quickly Start
 
-* Runing script at local PC
-
-    ```bash
-    sudo chmod +x init_dev.sh
-    bash ./init_dev.sh
-    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
-    ```
-
 * Execute testsuites in docker container
 
     1. Pull the images from docker-hub
@@ -45,11 +37,12 @@ Base on apulis/MachineWolf!
     2. Start container
     
     ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
-    # Open web IDE
-    # http://<xxx.xxx.xxx.xxx>:8088 
+    docker run -d     -p 8088:8080  -p 8090:8090     --name "machindevil"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
     ```
+* Open web IDE
 
+    **http://<xxx.xxx.xxx.xxx>:8088/tools/vscode/**
+    
 * Running locust scripts by taurus
 
     `bzt example/taurus/quick_test.yml`
@@ -65,7 +58,14 @@ Base on apulis/MachineWolf!
 * Runing pytest testsuites, such as non-api， HA， throughput test scripts
 
     `pytest example/pytest/test_ha.py`
+    
+* Runing script at local PC
 
+    ```bash
+    sudo chmod +x init_dev.sh
+    bash ./init_dev.sh
+    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
+    ```
 **Export testreport**
 
 * `testreport/result.csv_stats.csv`
