@@ -30,11 +30,7 @@ Base on apulis/MachineWolf!
 
 * Execute testsuites in docker container
 
-    1. Pull the images from docker-hub
-    
-    `docker pull banrieen/MachineDevil`
-
-    2. Start container
+    1. Start container
     
     ```bash
     docker run -d     -p 8088:8080  -p 8090:8090     --name "machindevil"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
@@ -59,7 +55,7 @@ Base on apulis/MachineWolf!
 
     `pytest example/pytest/test_ha.py`
     
-* Runing script at local PC
+* Also It allow you runing scripts at local PC
 
     ```bash
     sudo chmod +x init_dev.sh
@@ -101,26 +97,21 @@ Base on apulis/MachineWolf!
 * testhub:      Platform, component test cases and scripts
 * issuesboard:  Synchronize issues and reports
 
-### Schema of test studio
+### Schema of test
 
-The test suite is an independent and flexible organization test suite based on the purpose of being inclusive and accommodating extraction. Support a variety of cutting-edge and excellent tools and concepts; currently test schemes (testscheme), data (datas.yaml), scripts (.py, .jmx), and execution plans (host.yml, taurus.yml) are organized flexibly Together.
+The testsuites is an independent and flexible organization on the purpose of being inclusive and accommodating extraction. Support a variety of cutting-edge and excellent tools and concepts; currently test schemes (testscheme), data (datas.yaml), scripts (.py, .jmx), and execution plans (host.yml, taurus.yml) are flexibly unit.
 There are still some examples that need to be improved and supplemented.
 
 ``` direction
 |-- testhub/
     `-- testscheme
-        |-- 5g_manufacturing
-        |-- annotations_cvat
+        |-- manufacturing
+        |-- annotations
     `-- testsuites
-        |-- annotations_cvat
+        |-- annotations_app
             |-- host.conf
-            |-- test_cvat_suites.py
+            |-- test_labels.py
             |-- datas.yaml
-        |-- dlws
-        |-- e2e_aiarts
-        |-- ha_aiarts
-        |-- jobmanager
-        |-- songshanhu
     `-- testlib
         |-- fake_users
         |-- postgres_client
@@ -132,8 +123,8 @@ There are still some examples that need to be improved and supplemented.
 In order to avoid information leaks, invalid information floods.
 
 * All test scripts, explanatory text and configuration files remove all ID, ACCOUNT, HOST information
-* Does not retain any test environment information, and any test data
-* Replace sensitive information with canonical logos：
+* Do not retain any test environment information, and any test datas
+* Replace sensitive information with canonical logs：
 
     + account： `<HOSTNAME>:<PASSWORLD>`
     + host： `<HOST>:<PORT>`
