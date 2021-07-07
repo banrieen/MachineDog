@@ -18,7 +18,7 @@
 
 Base on apulis/MachineWolf!
 
-**MachineDevil** is a Test Studio for AI 、Deep Learning or Machine Learning framwork、platform. As the Best-Practice about AIops  or MLOps.
+**MachineDevil** is a Test Grounds for AI 、Deep Learning or Machine Learning framwork、platform. As the Best-Practice for build Application.
 
 🍃 🍂 🍁 🍄 🐚 🍀 🌾 💐 🌷🦥 🐁 🐀 🐿 🦔 🐾 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🌱
 
