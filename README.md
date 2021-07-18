@@ -9,16 +9,32 @@
 
 
 
-<!-- ![GitHub Latest download](https://img.shields.io/github/downloads/banrieen/MachineDevil/latest/total?style=plastic) -->
-<!-- [![codeql-analysis Actions Status](https://github.com/banrieen/MachineDevil/workflows/codeql-analysis/badge.svg)](https://github.com/banrieen/MachineDevil/actions)
-[![nightly-build Actions Status](https://github.com/banrieen/MachineDevil/workflows/nightly-build/badge.svg)](https://github.com/banrieen/MachineDevil/actions) -->
-
-
 [English Doc](README.md) | [简体中文](README_zh_CN.md)
 
 Base on apulis/MachineWolf!
 
 **MachineDevil** is a Test Grounds for AI 、Deep Learning or Machine Learning framwork、platform. As the Best-Practice for build Application.
+
+**Suport Env**
+* Ubuntu 18.04 x86-64
+* Python
+* java(jmeter)
+* node.js/deno
+* Rust
+* Go
+* Git
+
+**[Support Tools](https://github.com/ml-tooling/ml-workspace#features)**
+* Jupyter
+* Desktop GUI 
+* VS Code
+* JupyterLab
+* Git Integration
+* Access Ports 
+* Tensorboard
+* Hardware Monitoring
+* SSH Access
+* Job Execution
 
 🍃 🍂 🍁 🍄 🐚 🍀 🌾 💐 🌷🦥 🐁 🐀 🐿 🦔 🐾 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🌱
 
@@ -33,12 +49,15 @@ Base on apulis/MachineWolf!
     1. Start container
     
     ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090     --name "machindevil"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
+    docker run -d -p 8088:8080  -p 8090:8090     --name "machindevil"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinedevil:latest
     ```
 * Open web IDE
 
     **http://<xxx.xxx.xxx.xxx>:8088/tools/vscode/**
-    
+
+    *And open foler `/home/MachineDevil`*
+    ![code](docs/static/remote-code.png)
+
 * Running locust scripts by taurus
 
     `bzt example/taurus/quick_test.yml`
@@ -143,15 +162,15 @@ For more detailed information about installation guides, tutorials and APIs, ple
     1. Complete package architecture
     2. Installation and environmental preparation
     3. Implementation example
-    4. Basic test case set
+    4. Basic testcases 
 
 * **Planning**
 
-    1. Supplement and improve the test script
-    2. Tuning the synchronization process between ZenTao and the test suite Tuning the synchronization process between ZenTao and the test suite
-    3. Debug the synchronization process between argo and test suite
+    1. Supplement and improve the test libs
+    2. Tuning the synchronization process to ZenTao 
+    3. Debug the synchronization process between argo and testsuites
     4. Supplemental framework, model performance tools and scripts
-    5. Integrate monitoring in k8s
+    5. Integrate monitoring for k8s
 
 **Please refer to the release notes for details[RELEASE](./RELEASE.md)。**
 

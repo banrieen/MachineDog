@@ -15,39 +15,50 @@
 
 [English Doc](README.md) | [简体中文](README_zh_CN.md)
 
-基于 apulis/MachineWolf
 
-**MachineDevil** 是一个自动化测试性能套件，促进 AiOps 实施。
+**MachineDevil** 是AI、DL/ML框架、平台、应用的远程开发、调试、测试环境。可作为构建应用程序的最佳Xdevops实践。
 
-🍃 🍂 🍁 🍄 🐚 🍀 🌾 💐 🌷🦥 🐁 🐀 🐿 🦔 🐾 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🌱
+一个可以随时启用，远端协作的研发环境！
 
-**😄 点个 Star , 手留余香，个人维护，请多多支持，不胜感激！🍻 🥂💕 💞 💓**
+🍃 🍂 🍁 🍄 🐚 🍀 🌾 💐 🌷🦥 🐁 🐀 🐿 🦔 🐾 🐉
 
-🌼 🌻 🌞 🌝 🌛🌈 ☀️ 🌤 ⛅️ 🌥🌏 🪐 💫 ⭐️ 🌟 ✨ 🍐 🍊 🍋 🍌 🍉 🍇 🍓
+**😄 点个 Star , 手留余香，请多多支持，不胜感激！🍻
+
+🌼 🌻 🌞 🌝 🌛🌈 ☀️ 🌤 ⛅️ 🌥🌏 🪐 💫 ⭐️ 🌟 ✨ 
+
+**支持环境**
+* Ubuntu 18.04 x86-64
+* Python
+* java(jmeter)
+* node.js/deno
+* Rust
+* Go
+* Git
+
+**[支持工具](https://github.com/ml-tooling/ml-workspace#features)**
+* Jupyter
+* Desktop GUI 
+* VS Code
+* JupyterLab
+* Git Integration
+* Access Ports 
+* Tensorboard
+* Hardware Monitoring
+* SSH Access
+* Job Execution
 
 ### 快速使用指导
 
-* 在本地执行测试脚本
+* 在远程docker环境中执行testsuites
 
     ```bash
-    sudo chmod +x init_dev.sh
-    bash ./init_dev.sh
-    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
+    docker run -d  -p 8088:8080  -p 8090:8090     --name "machindevil"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinedevil:latest
     ```
 
-* 在docker环境中执行testsuites
+    **http://<xxx.xxx.xxx.xxx>:8088/tools/vscode/**
 
-    1. 拉取已经编译好的镜像
-    
-    `docker pull banrieen/MachineDevil`
-
-    2. 执行docker
-    
-    ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/MachineDevil:latest
-    # 打开jupyterlab
-    # http://<xxx.xxx.xxx.xxx>:8088 
-    ```
+    *可选择打开文件夹 `/home/MachineDevil`*
+    ![code](docs/static/remote-code.png)
 
 * 使用taurus执行locust脚本
 
@@ -64,6 +75,14 @@
 * 使用pytest执行非接口类的脚本，比如ha,吞吐量测试集等
 
     `pytest example/pytest/test_ha.py`
+
+* 在本地执行测试脚本
+
+    ```bash
+    sudo chmod +x init_dev.sh
+    bash ./init_dev.sh
+    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
+    ```
 
 **导出测试报告**
 
@@ -108,18 +127,13 @@
 ``` direction
 |-- testhub/
     `-- testscheme
-        |-- 5g_manufacturing
-        |-- annotations_cvat
+        |-- manufacturing
+        |-- annotations
     `-- testsuites
-        |-- annotations_cvat
+        |-- annotations
             |-- host.conf
-            |-- test_cvat_suites.py
+            |-- testsuites.py
             |-- datas.yaml
-        |-- dlws
-        |-- e2e_aiarts
-        |-- ha_aiarts
-        |-- jobmanager
-        |-- songshanhu
     `-- testlib
         |-- fake_users
         |-- postgres_client
