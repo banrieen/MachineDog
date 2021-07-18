@@ -1,7 +1,6 @@
-# DockerName: Locust runner
-# Usecase: With locust runtime dependentance tools and testsuites
+# DockerName: Devil runner
+# Usecase: With many runtime dependentance tools and testsuites
 # Update: 2021-03-30
-# Dependents:  python3
 # Arch: x86-64
 # Version: v0.5.0
 # Editor：thomas
